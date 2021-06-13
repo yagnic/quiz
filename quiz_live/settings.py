@@ -28,8 +28,6 @@ SECRET_KEY = 'django-insecure-*n#$44$i&e_su22=v6k84k_qvnb%b@^5z^a(o0g$x(3mwz859g
 DEBUG = False
 
 ALLOWED_HOSTS = []
-STATIC_ROOT = os.path.join(BASE_DIR, 'static/')
-django_heroku.settings(locals())
 
 
 # Application definition
@@ -125,6 +123,8 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.2/howto/static-files/
 
 STATIC_URL = '/static/'
+STATIC_ROOT = os.path.join(BASE_DIR, 'static/')
+django_heroku.settings(locals())
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
